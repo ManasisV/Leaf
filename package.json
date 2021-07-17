@@ -1,0 +1,28 @@
+{
+  "name": "leaf",
+  "version": "0.0.1",
+  "description": "A Weather Forecaster in the nearest terminal",
+  "main": "index.js",
+  "scripts": {
+    "start": "utilities/weather.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManasisV/Leaf.git"
+  },
+  "author": "ManasisV",
+  "license": "MIT",
+  "bin": {
+    "leaf": "bin/leaf"
+  },
+  "bugs": {
+    "url": "https://github.com/ManasisV/Leaf/issues"
+  },
+  "homepage": "https://github.com/ManasisV/Leaf#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "minimist": "^1.2.5",
+    "ora": "^5.4.1"
+  }
+}
