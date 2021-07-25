@@ -1,10 +1,11 @@
 {
-  "name": "leaf",
-  "version": "0.0.1",
+  "name": "leaf-weather",
+  "version": "1.1.0",
   "description": "A Weather Forecaster in the nearest terminal",
   "main": "index.js",
   "scripts": {
-    "start": "utilities/weather.js"
+    "start": "./utilities/weather.js",
+    "settings": "utilities/settings"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,12 @@
   "dependencies": {
     "axios": "^0.21.1",
     "chalk": "^4.1.1",
+    "cli-table": "^0.3.6",
+    "colors": "^1.4.0",
+    "conf": "^10.0.1",
+    "inquirer": "^8.1.2",
     "minimist": "^1.2.5",
-    "ora": "^5.4.1"
+    "ora": "^5.4.1",
+    "prompts": "^2.4.1"
   }
 }
