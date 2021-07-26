@@ -15,7 +15,6 @@ module.exports = async (args) => {
 
     if (location === undefined || location === null){
       console.log(help_today)
-      exit()
     }
 
     config.set("recent", location)

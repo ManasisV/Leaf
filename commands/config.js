@@ -22,6 +22,6 @@ module.exports = (args) => {
       run()
   }
   else{
-    console.log(chalk.red("This in not a valid config command. PLease type ") + chalk.blue("leaf config --help") + chalk.red("for more information about config commands"))
+    console.log(chalk.red("This in not a valid config command. PLease type ") + chalk.blue("leaf help --config") + chalk.red("for more information about config commands"))
   }
 }

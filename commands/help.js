@@ -20,7 +20,7 @@ const menus = {
   
   `Configuration: leaf config --star`,
 
-  config: chalk.bold("\nUsage: leaf config <options>") + 
+  config: chalk.bold("\nUsage: leaf config <options>\n\n") + 
 
   `Options: 
     --apikey     Change/Configurate the api key of OpenWeatherMap Api
@@ -29,9 +29,13 @@ const menus = {
 }
 
 module.exports = (args) => {
-    const subCmd = args._[0] === 'help'
-    ? args._[1]
-    : args._[0]
-
-  console.log(menus[subCmd] || menus.main)
+  if(args.today){
+    console.log(menus.today)
+  } else if(args.star){
+    console.log(menus.star)
+  } else if(args.config){
+    console.log(menus.config)
+  } else{
+    console.log(menus.main)
+  }
 }

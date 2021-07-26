@@ -10,7 +10,7 @@ module.exports = async (args) => {
     const recentLocation = config.get("recent")
 
     if(recentLocation === undefined || recentLocation === null){
-        exit()
+        throw new Error("No recent location")
     }
 
     const weather = await getWeather(recentLocation)

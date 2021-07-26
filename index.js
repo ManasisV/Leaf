@@ -47,7 +47,7 @@ module.exports = () => {
       require('./utilities/recent')(args)
       break
     case 'settings':
-      require('./utilities/settings')(args)
+      require('./config/settings')(args)
       break
     default:
       console.log(`${cmd} is not a valid command.`)
