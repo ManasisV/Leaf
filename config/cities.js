@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
-const Conf = require('conf')
-const config = new Conf()
+const kleur = require('kleur');
 
 module.exports = {
   askCities: () => {
-    console.log("Welcome to the configuration of your starred cities. Starred cities will appear if your type leaf starred.\nIf you want to exit type ctrl+c.\n")
+    console.log("\nWelcome to the configuration of your starred cities. Starred cities will appear if your type leaf starred.")
+    console.log(kleur.blue("If you want to exit type ctrl+c.\n"))
     const questions = [
       {
         name: 'city1',

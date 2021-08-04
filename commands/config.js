@@ -1,5 +1,5 @@
 const Conf = require('conf')
-const chalk = require('chalk')
+const kleur = require('kleur')
 const config = new Conf()
 
 //Modules
@@ -14,7 +14,7 @@ module.exports = (args) => {
     }
     run()
   }
-  else if (args.star){
+  else if (args.aspen){
     const run  = async () => {
       const cities = await favcities.askCities()
       config.set("cities", cities)
@@ -22,6 +22,6 @@ module.exports = (args) => {
       run()
   }
   else{
-    console.log(chalk.red("This in not a valid config command. PLease type ") + chalk.blue("leaf help --config") + chalk.red("for more information about config commands"))
+    console.log(kleur.red("This in not a valid config command. PLease type ") + kleur.blue("leaf help --config") + kleur.red("for more information about config commands"))
   }
 }

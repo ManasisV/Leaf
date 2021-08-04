@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-
 const minimist = require('minimist')
+const kleur = require('kleur')
 const Conf = require('conf')
 
-const chalk = require('chalk')
+const config = new Conf()
 
 module.exports = () => {
+  const recent = config.get('recent')
+
   const args = minimist(process.argv.slice(2))
   let cmd = args._[0] || 'undefined'
-
-  const config = new Conf()
 
   if (args.version || args.v) {
     cmd = 'version'
@@ -17,8 +17,13 @@ module.exports = () => {
 
   switch(cmd){
     case 'undefined':
-      require('./utilities/recent')(args)
-      console.log(chalk.bold("\nPlease type [leaf help] for more information."))
+      if(recent != undefined || recent != null){
+
+        require('./utilities/recent')(args)
+    }else{
+      console.log("No recent location")
+    }
+      console.log(kleur.bold("\nType [leaf help] for more information."))
       break
     // Cases of weather forecast for today
     case 'today':
@@ -46,8 +51,8 @@ module.exports = () => {
     case 'recent':
       require('./utilities/recent')(args)
       break
-    case 'settings':
-      require('./config/settings')(args)
+    case 'delete':
+      require('./utilities/delete')(args)
       break
     default:
       console.log(`${cmd} is not a valid command.`)
