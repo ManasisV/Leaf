@@ -1,6 +1,6 @@
 {
   "name": "leaf-weather",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "A Weather Forecaster in the nearest terminal",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,9 @@
     "leaf": "bin/leaf"
   },
   "bugs": {
-    "url": "https://github.com/ManasisV/Leaf/issues"
+    "url": "https://github.com/ManasisV/leaf/issues"
   },
-  "homepage": "https://github.com/ManasisV/Leaf#readme",
+  "homepage": "https://github.com/ManasisV/leaf#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "cli-table": "^0.3.6",
