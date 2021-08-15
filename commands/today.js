@@ -40,7 +40,7 @@ module.exports = async (args) => {
     console.log(kleur.bold(`\nWeather in: ${kleur.blue(location)}`))
     console.log(kleur.magenta(`    Overall weather: ${overall}`))
     console.log(kleur.yellow(`    Temperature: ${temperature}°C`))
-    console.log(kleur.cyanBright(`    Humidity: ${humidity}%`))
+    console.log(kleur.cyan(`    Humidity: ${humidity}%`))
     console.log(kleur.green(`    Pressure: ${pressure}mb`))
     console.log(kleur.red(`\nCoordinates:\n    Longitude: ${weather.data.coord.lon}\n    Langitute: ${weather.data.coord.lat} `))
 

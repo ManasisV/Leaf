@@ -3,8 +3,8 @@ const Conf = require('conf');
 
 const config = new Conf()
 
-module.exports = async (location) => {
-  const response = await axios({
+module.exports = (location) => {
+  const response = axios({
     method: "GET",
     url: "http://api.openweathermap.org/data/2.5/weather",
     params: {
