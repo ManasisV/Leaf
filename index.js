@@ -46,13 +46,10 @@ module.exports = () => {
       require('./utilities/starred')(args)
       break
     case 'aspen':
-      require('./utilities/starred')(args)
+      require('./utilities/aspen')(args)
       break
     case 'recent':
       require('./utilities/recent')(args)
-      break
-    case 'delete':
-      require('./utilities/delete')(args)
       break
     default:
       console.log(`${cmd} is not a valid command.`)

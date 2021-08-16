@@ -23,7 +23,7 @@ module.exports = (args) => {
         run()
     }
     else{
-      console.log(kleur.red("This in not a valid config command. PLease type ") + kleur.blue("leaf help --config") + kleur.red("for more information about config commands"))
+      console.log(kleur.red("This in not a valid config command. PLease type ") + kleur.blue("leaf help --config") + kleur.red(" for more information about config commands"))
     }
   }
   catch(err){
